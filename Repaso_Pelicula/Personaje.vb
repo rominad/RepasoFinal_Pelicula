@@ -7,7 +7,7 @@ Public Class Personaje
     Private _sueldo As Decimal
     Private _nombre As String
     Private _actor As Actor
-    '_PROPIEDAD 
+    '_PROPIEDADES
     Public Property Sueldo As Decimal
         Get
             Return _sueldo

@@ -4,7 +4,7 @@
     'CAMPOS
     Private _FechaNacimiento As Date
     Private _nombre As String
-    'PROPIEDADES
+    'PROPIEDADESS
     Public Property Nombre As String Implements Entidad.Nombre
         Get
             Return _nombre

@@ -47,7 +47,7 @@ Public Class Pelicula
         Return Total
     End Function
     Function TopSueldos() As List(Of String)
-        'debe devolver la lista de 3actores con mejor sueldo,asignar nombre de actor + monto del sueldo.
+        'debe devolver la lista de 3actores con mejor sueldo,asignar nombre de actor + monto del sueldo
         Dim Lista As New List(Of Decimal)
         Dim ListaFinal As New List(Of String)
         Dim mayor_sueldo As Decimal = 0.00

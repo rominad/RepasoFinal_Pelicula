@@ -3,7 +3,7 @@
     Inherits Persona
     '-campo
     Shared _newId As Integer
-    '-propiedad
+    '-propiedades
     Public ReadOnly Property ID As Integer
         Get
             Return _newId

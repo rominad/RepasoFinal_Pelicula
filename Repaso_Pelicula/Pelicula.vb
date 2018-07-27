@@ -1,6 +1,4 @@
-﻿Imports Repaso_Pelicula
-
-Public Class Pelicula
+﻿Public Class Pelicula
     '_IMPLEMENTO INTERFACE'
     Implements Entidad
     '_CAMPOS 
@@ -19,13 +17,13 @@ Public Class Pelicula
         End Set
     End Property
     Public Sub AddPersonaje(personaje As Personaje)
-        _Personajes.Add(personaje)
+        _personajes.Add(personaje)
     End Sub
     Public Sub RemovePersonaje(Personaje As Personaje)
-        _Personajes.Remove(Personaje)
+        _personajes.Remove(Personaje)
     End Sub
     Public Function getAllPersonajes() As List(Of Personaje)
-        Return _Personajes
+        Return _personajes
     End Function
     '_METODOS
     Function Creditos() As List(Of String)

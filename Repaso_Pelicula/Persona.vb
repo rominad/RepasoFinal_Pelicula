@@ -1,12 +1,10 @@
 ﻿Public MustInherit Class Persona
     'mustinherit class (son clases que heredan, no debo instanciar)
     Implements Entidad
-    'CAMPO CLASE
+    'CAMPOS
     Private _FechaNacimiento As Date
-    'CAMPO DE INTERFAZ
     Private _nombre As String
-
-    'PROPIEDAD DE INTERFAZ
+    'PROPIEDADES
     Public Property Nombre As String Implements Entidad.Nombre
         Get
             Return _nombre

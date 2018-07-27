@@ -3,13 +3,11 @@
 Public Class Personaje
     '_IMPLEMENTO INTERFACE'
     Implements Entidad
-    '_CAMPOS DE CLASE'
+    '_CAMPOS
     Private _sueldo As Decimal
-    '_CAMPOS DE INTERFACE'
     Private _nombre As String
-    '_CAMPOS DE ASOCIACION'
     Private _actor As Actor
-    '_PROPIEDAD DE CLASE'
+    '_PROPIEDAD 
     Public Property Sueldo As Decimal
         Get
             Return _sueldo
@@ -21,7 +19,6 @@ Public Class Personaje
             _sueldo = value
         End Set
     End Property
-    '_PROPIEDAD DE INTERFACE'
     Public Property Nombre As String Implements Entidad.Nombre
         Get
             Return _nombre
@@ -33,7 +30,6 @@ Public Class Personaje
             _nombre = value
         End Set
     End Property
-    '_PROPIEDAD DE ASOCIACION'
     Public Property Actor As Actor
         Get
             Return _actor
@@ -42,7 +38,7 @@ Public Class Personaje
             _actor = value
         End Set
     End Property
-    '_METODO DE CLASE'
+    '_METODOS
     Public Overrides Function ToString() As String
         Return Nombre + " (" + Actor.Nombre + ")"
     End Function
@@ -52,6 +48,7 @@ Public Class Personaje
         Sueldo = Nothing
     End Sub
     Sub New(nombre As String, actor As Actor, sueldo As Decimal)
+        MyBase.New()
         Me.Nombre = nombre
         Me.Actor = actor
         Me.Sueldo = sueldo

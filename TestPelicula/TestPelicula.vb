@@ -7,10 +7,10 @@ Module TestPelicula
         Dim Actor3 As New Actor
         Dim Actor4 As New Actor
 
-        Dim Personaje1 As New Personaje("Alberto", Actor1, 1500.5)
-        Dim Personaje2 As New Personaje("Luciano", Actor2, 3800.8)
-        Dim Personaje3 As New Personaje("Roberto", Actor3, 1500.5)
-        Dim Personaje4 As New Personaje("Andres", Actor4, 3800.8)
+        Dim Personaje1 As New Personaje("BATMAN", Actor1, 1500.5)
+        Dim Personaje2 As New Personaje("SPIDERMAN", Actor2, 3800.8)
+        Dim Personaje3 As New Personaje("IRON MAN", Actor3, 1500.5)
+        Dim Personaje4 As New Personaje("NUEVO man", Actor4, 3800.8)
 
         Dim Pelicula1 As New Pelicula
 
@@ -20,9 +20,9 @@ Module TestPelicula
             Console.WriteLine(ex.Message)
         End Try
         Try
-            Actor1.Nombre = "BATMAN"
-            Actor2.Nombre = "SPIDERMAN"
-            Actor3.Nombre = "IRON MAN"
+            Actor1.Nombre = "Alberto"
+            Actor2.Nombre = "Luciano"
+            Actor3.Nombre = "Roberto"
         Catch ex As Exception
             Console.WriteLine(ex.Message)
         End Try
@@ -61,7 +61,7 @@ Module TestPelicula
             Console.WriteLine(ex.Message)
         End Try
         Try
-            Actor4.Nombre = "NUEVO man"
+            Actor4.Nombre = "Fabio"
         Catch ex As Exception
             Console.WriteLine(ex.Message)
         End Try

@@ -3,12 +3,10 @@
 Public Class Pelicula
     '_IMPLEMENTO INTERFACE'
     Implements Entidad
-    '_CAMPOS DE INTERFACE'
+    '_CAMPOS 
     Private _nombre As String
-    '_CAMPOS DE ASOCIACION'
     Private _personajes As List(Of Personaje)
-    '_PROPIEDAD DE CLASE'
-    '_PROPIEDAD DE INTERFACE'
+    '_PROPIEDADES
     Public Property Nombre As String Implements Entidad.Nombre
         Get
             Return _nombre
@@ -20,7 +18,6 @@ Public Class Pelicula
             _nombre = value
         End Set
     End Property
-    '_PROPIEDAD DE ASOCIACION'
     Public Sub AddPersonaje(personaje As Personaje)
         _Personajes.Add(personaje)
     End Sub
@@ -30,7 +27,7 @@ Public Class Pelicula
     Public Function getAllPersonajes() As List(Of Personaje)
         Return _Personajes
     End Function
-    '_METODO DE CLASE'
+    '_METODOS
     Function Creditos() As List(Of String)
         'debe devolver 1 lista con nombres de actores y su personaje interpretado entre(),ordenados por nombre de actor. 
         Dim lista As New List(Of String)

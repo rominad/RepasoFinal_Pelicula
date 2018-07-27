@@ -10,7 +10,7 @@ Module TestPelicula
         Dim Personaje1 As New Personaje("BATMAN", Actor1, 1500.5)
         Dim Personaje2 As New Personaje("SPIDERMAN", Actor2, 3800.8)
         Dim Personaje3 As New Personaje("IRON MAN", Actor3, 1500.5)
-        Dim Personaje4 As New Personaje("NUEVO man", Actor4, 3800.8)
+        Dim Personaje4 As New Personaje("NUEVO MAN", Actor4, 3800.8)
 
         Dim Pelicula1 As New Pelicula
 

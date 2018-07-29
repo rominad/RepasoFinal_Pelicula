@@ -45,28 +45,36 @@
         Return Total
     End Function
     Function TopSueldos() As List(Of String)
-        'debe devolver la lista de 3actores con mejor sueldo,asignar nombre de actor + monto del sueldo
-        Dim Lista As New List(Of Decimal)
-        Dim ListaFinal As New List(Of String)
-        Dim mayor_sueldo As Decimal = 0.00
-        'cargamos la lista y obtenemos una variable con el mayor sueldo
+        ''debe devolver la lista de 3actores con mejor sueldo,asignar nombre de actor + monto del sueldo
+        Dim listaSueldos As New List(Of Single)
+        Dim listaFinal As New List(Of String)
+        Dim listaNueva As New List(Of Single)
+        Dim aux As Single = 0
+        'cargamos todos  los sueldo a la listaSueldos
         For Each Personaje In _personajes
-            Lista.Add(Personaje.Sueldo)
-            If Personaje.Sueldo > mayor_sueldo Then
-                mayor_sueldo = Personaje.Sueldo
+            listaSueldos.Add(Personaje.Sueldo)
+        Next
+        'ordenamos la lista para juntar los sueldos similares, y la ponemos de reversa para que el mayor este primero
+        listaSueldos.Sort()
+        listaSueldos.Reverse()
+        'agregamos a la listaNueva los sueldos, ya que se repiten
+        For x = 0 To listaSueldos.Count() - 1
+            If listaSueldos.Item(x) <> aux Then
+                listaNueva.Add(listaSueldos.Item(x))
+                aux = listaSueldos.Item(x)
             End If
         Next
-        'buscamos los tres mayores
-        For Each Personaje In _personajes
-            If Personaje.Sueldo = mayor_sueldo Then
-                Dim aux As String = ""
-                aux = Personaje.Nombre + " - " + Personaje.Sueldo.ToString
-                ListaFinal.Add(aux)
-            End If
+        'cargamos los tres primeros + sus nombres a la lista final
+        For y = 0 To 2
+            For Each personaje In _personajes
+                If listaNueva.Item(y) = personaje.Sueldo Then
+                    listaFinal.Add(personaje.Nombre & " - $" & listaNueva.Item(y))
+                End If
+            Next
         Next
-        ListaFinal.Sort()
-        Return ListaFinal
+        Return listaFinal
     End Function
+
     Public Overrides Function ToString() As String
         Return Nombre
     End Function
